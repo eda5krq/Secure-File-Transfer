@@ -24,8 +24,15 @@ def load_public_key_from_bytes(data: bytes):
     return serialization.load_pem_public_key(data, backend=default_backend())
 
 def rsa_encrypt(public_key, plaintext: bytes) -> bytes:
-    pass
-
+    #enripton AES key me RSA public key
+    return public_key.encrypt(
+        plaintext,
+        padding.OAEP(
+            mgf=padding.MGF1(algorithm=hashes.SHA256()),
+            algorithm=hashes.SHA256(),
+            label=None
+        )
+    )
 
 def rsa_decrypt(private_key, ciphertext: bytes) -> bytes:
     pass
