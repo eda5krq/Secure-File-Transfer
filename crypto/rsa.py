@@ -22,3 +22,10 @@ def serialize_public_key(public_key) -> bytes:
 def load_public_key_from_bytes(data: bytes):
     #ngarkon public key nga PEM bytes
     return serialization.load_pem_public_key(data, backend=default_backend())
+
+def rsa_encrypt(public_key, plaintext: bytes) -> bytes:
+    pass
+
+
+def rsa_decrypt(private_key, ciphertext: bytes) -> bytes:
+    pass
