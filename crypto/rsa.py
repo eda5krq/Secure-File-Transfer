@@ -18,3 +18,7 @@ def serialize_public_key(public_key) -> bytes:
         encoding=serialization.Encoding.PEM,
         format=serialization.PublicFormat.SubjectPublicKeyInfo
     )
+
+def load_public_key_from_bytes(data: bytes):
+    #ngarkon public key nga PEM bytes
+    return serialization.load_pem_public_key(data, backend=default_backend())
