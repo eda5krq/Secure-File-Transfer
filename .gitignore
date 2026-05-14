@@ -1,0 +1,14 @@
+__pycache__/
+*.pyc
+
+venv/
+.venv/
+
+.idea/
+
+server_storage/
+client_downloads/
+test_files/
+
+*.log
+.env
