@@ -2,13 +2,13 @@
 
 ## Përshkrimi i Projektit
 
-Secure File Transfer është një aplikacion client-server i zhvilluar në Python që mundëson transferimin e sigurt të file-ve përmes komunikimit me sockets. Projekti është ndërtuar duke përdorur konceptin e hybrid encryption, ku RSA-2048 përdoret për shkëmbimin e sigurt të çelësave, ndërsa AES-256-GCM përdoret për enkriptimin dhe dekriptimin e skedarëve gjatë transferimit.
+Secure File Transfer është një aplikacion client-server i zhvilluar në Python që mundëson transferimin e sigurt të file-ve përmes komunikimit me sockets. Projekti është ndërtuar duke përdorur konceptin e hybrid encryption, ku RSA-2048 përdoret për shkëmbimin e sigurt të çelësave, ndërsa AES-256-GCM përdoret për enkriptimin dhe dekriptimin e file-ve gjatë transferimit.
 
 Gjatë procesit të komunikimit, klienti dhe serveri gjenerojnë çelësa RSA publik dhe privat. Pas shkëmbimit të çelësave publik, klienti krijon një AES session key i cili enkriptohet me RSA dhe dërgohet te serveri. Pas kësaj, të gjitha të dhënat transferohen duke përdorur AES encryption për siguri dhe performancë më të lartë.
 
 Për të garantuar integritetin dhe autenticitetin e file-ve, projekti përdor SHA-256 hashing dhe RSA-PSS digital signatures. Para transferimit gjenerohet hash i file-it dhe nënshkruhet dixhitalisht, ndërsa pala pranuese verifikon hash-in dhe nënshkrimin për të siguruar që file nuk është modifikuar gjatë transmetimit.
 
-Aplikacioni mbështet upload dhe download të skedarëve midis klientit dhe serverit dhe është i organizuar në module të ndara për kriptografi, komunikim dhe menaxhim të file-ve për ta bërë kodin më të pastër dhe më të lehtë për mirëmbajtje.
+Aplikacioni mbështet upload dhe download të file-ve midis klientit dhe serverit dhe është i organizuar në module të ndara për kriptografi, komunikim dhe menaxhim të file-ve për ta bërë kodin më të pastër dhe më të lehtë për mirëmbajtje.
 
 ## Teknologjitë e Përdorura
 
